@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽選会 管理者画面 (サービス提供者用)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>管理者画面 (サービス提供者用)</h1>
+        <p class="note">全ての抽選会で使用する景品のマスターデータを登録・管理します。</p>
+
+        <div class="input-section">
+            <input type="text" id="prize-name-input" placeholder="景品名を入力してください">
+            <input type="url" id="prize-image-input" placeholder="景品画像のURLを入力してください (任意)">
+            <button id="add-prize-button">景品を追加</button>
+        </div>
+
+        <div class="prize-list-section">
+            <h2>登録済みマスター景品リスト</h2>
+            <ul id="master-prize-list">
+                </ul>
+            <button id="clear-master-prizes-button" class="clear-button">全てのマスター景品をクリア</button>
+            <p class="note">※登録された景品は、Googleスプレッドシートに保存されます。</p>
+        </div>
+
+        <div class="navigation-section">
+            <a href="event_setup.html" class="button">幹事様用景品設定ページへ</a>
+            <a href="index.html" class="button">抽選ページへ</a>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

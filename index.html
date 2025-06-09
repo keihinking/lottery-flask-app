@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽選会 スタート！</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>抽選スタート！</h1>
+
+        <div class="horizontal-roulette-container">
+            <div class="indicator-frame"></div> <div id="roulette-items-track">
+                </div>
+        </div>
+
+        <button id="draw-button" class="action-button">抽選！</button>
+        <button id="reset-drawing-button" class="action-button reset-button">抽選をリセット</button>
+
+        <div class="drawn-list-section">
+            <h2>抽選済みの景品</h2>
+            <ul id="drawn-prizes-list">
+                </ul>
+        </div>
+
+        <div class="navigation-section">
+            <a href="admin.html" class="button admin-link">管理者用画面へ</a>
+            <a href="event_setup.html" class="button">幹事様用景品設定ページへ</a>
+        </div>
+    </div>
+
+    <script src="lottery.js"></script>
+</body>
+</html>
