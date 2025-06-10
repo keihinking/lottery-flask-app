@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ★★★ ここをあなたのFlaskサーバーのURLに置き換えてください ★★★
     // 例: const SCRIPT_URL = 'https://lottery-flask-app.onrender.com/data/'; 
-    const SCRIPT_URL = 'http://127.0.0.1:5000/api/'; 
+    const SCRIPT_URL = 'https://lottery-flask-app.onrender.com/api/'; 
 
     const rouletteItemsTrack = document.getElementById('roulette-items-track'); 
     const drawButton = document.getElementById('draw-button');
