@@ -56,7 +56,7 @@ def get_filepath_from_sheetname(sheet_name):
         return None # 不正なシート名
 
 # GETリクエストを処理（データの読み込み）
-@app.route('/api/', methods=['GET']) # /api/data から /api/ に変更
+@app.route('/data/', methods=['GET']) # /api/data から /api/ に変更
 def get_data():
     sheet_name = request.args.get('sheet')
     
@@ -71,7 +71,7 @@ def get_data():
     return jsonify({'success': True, 'data': data})
 
 # POSTリクエストを処理（データの追加、更新、削除、クリア）
-@app.route('/api/', methods=['POST']) # /api/data から /api/ に変更
+@app.route('/data/', methods=['POST']) # /api/data から /api/ に変更
 def post_data():
     sheet_name = request.args.get('sheet')
     action = request.args.get('action')

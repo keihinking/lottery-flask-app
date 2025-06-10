@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // ★★★ ここをあなたのFlaskサーバーのURLに置き換えてください ★★★
-    // 例: const SCRIPT_URL = 'https://lottery-app-online.onrender.com/api/'; 
+    // 例: const SCRIPT_URL = 'https://lottery-app-online.onrender.com/data/'; 
     const SCRIPT_URL = 'http://127.0.0.1:5000/api/'; 
 
     const masterPrizeListSelectionUl = document.getElementById('master-prize-list-selection');
