@@ -143,6 +143,12 @@ def serve_static(filename):
     return send_from_directory('.', filename)
 
 if __name__ == '__main__':
-    # Renderでは環境変数PORTを使用する
-    port = int(os.environ.get("PORT", 5000)) # 環境変数PORTが設定されていなければ5000番を使用
-    app.run(host='0.0.0.0', port=port) # host='0.0.0.0' を追加し、portを環境変数から取得
+    # ローカル開発環境でのみapp.run()を使用し、Renderではgunicornがアプリを起動する
+    # Renderは'gunicorn app:app'コマンドを実行するため、ここではapp.run()は不要
+    # ただし、ローカルテストのために残す場合は以下のように条件分岐させる
+    if os.environ.get("RENDER"): # Render環境の場合
+        # Renderではgunicornがアプリを起動するため、app.run()は呼び出さない
+        pass
+    else: # ローカル環境の場合
+        port = int(os.environ.get("PORT", 5000))
+        app.run(host='0.0.0.0', port=port, debug=True) # debug=True を再度追加してローカルデバッグしやすく
